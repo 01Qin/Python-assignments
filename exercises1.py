@@ -1,3 +1,3 @@
-input('Enter your name:')
-print("Hello, Qin!")
+name=input('Enter your name:')
+print("Hello, "+ name +"!")
 
