@@ -1,4 +1,4 @@
-import gram
+import math
 x = input("Enter talents:")
 y = input("Enter pounds:")
 z = input("Enter lots:")
