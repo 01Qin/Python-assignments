@@ -5,7 +5,7 @@ number3 = int(input("Enter the third number: "))
 sum = number1 + number2 + number3
 average = sum / 3
 product = number1 * number2 * number3
-if (number1, number2 , number3).sort()
+if (number1 and number2 and number3) .sort (int)
     print("The sum is:", sum)
     print("The average is:", average)
     print("The product is:", product)
