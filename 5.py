@@ -1,9 +1,9 @@
 import math
-x = input("Enter talents:")
-y = input("Enter pounds:")
-z = input("Enter lots:")
+x = float(input("Enter talents:"))
+y = float(input("Enter pounds:"))
+z = float(input("Enter lots:"))
 x = 20 * y
+a = z * 13.3
 y = 32 * z
-a = z * 13.3 gram
 b = 1000 * a
-print("The weight in modern units: ", a 'and' b)
+print("The weight in modern units: ", a and b)
