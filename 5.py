@@ -8,4 +8,4 @@ grams = float(13.3 * float(s_lots))
 kilograms = float(grams / 1000)
 s_grams = grams % 1000
 print(f"The weight in modern units: ")
-print(f"{kilograms:.2f} kilograms and {s_grams:.2f} grams")
+print(f"{int(kilograms)} kilograms and {s_grams:.2f} grams")
