@@ -6,4 +6,5 @@ s_pounds = pounds + talents * 20
 s_lots = lots + s_pounds * 32
 grams = float(13.3 * float(s_lots))
 kilograms = float(grams / 1000)
-print(f"The weight in modern units: {kilograms:.2f} kilograms and {grams:.2f} grams")
+s_grams = grams % 1000
+print(f"The weight in modern units: {kilograms:.2f} kilograms and {s_grams:.2f} grams")
