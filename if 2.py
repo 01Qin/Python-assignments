@@ -1,11 +1,11 @@
-class = str(input("enter the cabin class of a cruise ship:"))
-if class == LUX
+c = str(input("enter the cabin class of a cruise ship:"))
+if c == "LUX":
     print("upper-deck cabin with a balcony.")
-if class == A
+if c == "A":
     print("above the car deck, equipped with a window")
-if class == B
+if c == "B":
     print("windowless cabin above the car deck.")
-if class == C
+if c == "C":
     print("windowless cabin below the car deck.")
-eles://
-print("Invalid cabin class.')
+else:
+    print("Invalid cabin class.")
