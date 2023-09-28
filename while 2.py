@@ -1,5 +1,5 @@
-value = int(input("enter a value:"))
+value = int(input("Enter a number of inches:"))
 while value >= 0:
-    print(f"executing value:", value * 2.54, "centimeters")
-    value = int(input("enter a value:"))
-print("execution stopped")
+    print(f"{value} inches is equal to {value * 2.54} centimeters.")
+    value = int(input("Enter a number of inches:"))
+print("Execution stopped.")
