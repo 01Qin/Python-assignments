@@ -1,6 +1,7 @@
-number = []
-while number == "":
+number = []:
+while
     number = input("enter a number:")
+    if number == "":
     break
 if number:
     smallest = min(number)
