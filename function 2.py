@@ -4,4 +4,4 @@ number_sum = 0
 for r in range(number):
     roll = random.randint(1,6)
     number_sum += roll
-    print("the sum of the rolls is ", number_sum)
+    print(f"the sum of the rolls is {number_sum}.")
