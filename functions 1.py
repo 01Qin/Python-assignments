@@ -1,13 +1,13 @@
-name = input("Enter the username: ")
-password = input("Enter the password: ")
-round = 0
-
-while name != "python" and password != "rules":
+round_original = 0
+while round_original < 5:
     name = input("enter the username: ")
     password = input("Enter the password: ")
-    round += 1
-    if round >= 5:
-        print("Access denied!")
+    if name == "python" and password == "rules":
+        print(f"welcome {name}")
         break
-else:
-    print(f"welcome {name}")
+    else:
+        print("incorrect username and password, please try again!")
+        round_original += 1
+    if round_original == 5:
+        print("Access denied!")
+
