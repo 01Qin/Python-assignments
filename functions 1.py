@@ -10,4 +10,3 @@ while round_original < 5:
         round_original += 1
     if round_original == 5:
         print("Access denied!")
-
