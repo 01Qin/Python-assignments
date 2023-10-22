@@ -6,13 +6,13 @@ def converted_to_liters(gallons):
 def main():
 
     while True:
-        gallons = float(input("enter the volume of gasoline in gallons: "))
+        gallons = float(input("Enter the volume of gasoline in gallons: "))
         if gallons < 0:
-            print("please enter a positive number!")
+            print("Please enter a positive number!")
             break
 
         liters = converted_to_liters(gallons)
-        print(f"the volume of gasoline in liters: {liters}")
+        print(f"The volume of gasoline in liters: {liters}")
 
 
 main()

@@ -9,10 +9,10 @@ def r_dice():
 def main():
     roll = random.randint(1, 6)
     while roll != 6:
-        print("roll:", roll)
+        print("Roll:", roll)
         roll = random.randint(1, 6)
     else:
-        print("roll:", roll)
+        print("Roll:", roll)
 
 
 main()
