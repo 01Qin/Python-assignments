@@ -1,6 +1,6 @@
 numbers = []
 while True:
-    number = input("Enter a number or input an empty string to quit: ")
+    number = input("Enter a number: ")
     if number == "":
         break
     numbers.append(float(number))
