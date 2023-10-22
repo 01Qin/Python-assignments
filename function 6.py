@@ -1,20 +1,17 @@
-quantity = float(input("enter the quantity of gasoline in gallons: "))
-
-
-def quantity_gallons(quantity):
-    print(f"the quantity of gasoline is: {float(quantity) * 3.785} liters.")
+def converted_to_liters(gallons):
+    liters = gallons * 3.785
+    return liters
 
 
 def main():
-    volume = float(input("enter the volume of gasoline in gallons: "))
-    while volume >= 0:
-        print(f"the quantity of gasoline is: {float(volume) * 3.785} liters.")
-        volume = float(input("enter the volume of gasoline in gallons: "))
-    else:
+
+    while True:
+        gallons = float(input("enter the volume of gasoline in gallons: "))
+        if gallons < 0:
+            break
         print("please enter a positive number!")
-
-
-quantity_gallons(quantity)
+        liters = converted_to_liters(gallons)
+        print(f"the volume of gasoline in liters: {liters}")
 
 
 main()
