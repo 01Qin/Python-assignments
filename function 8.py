@@ -1,6 +1,6 @@
 def the_unit_price(diameter, price):
-    price_meter = diameter / 100 * 3.14 * price
-    return price_meter
+    price_meter = price / ((diameter / 2) ** 2 * 3.14 / 100)
+    return r(price_meter,2)
 
 
 def main():
