@@ -23,14 +23,16 @@ print(f"The number of the month is {input_month}, {input_season}.")
 
 input_months = []
 while True:
+    global month
     input_month = input("Please enter a number of a month: ")
     if input_month == "" or input_month == "0":
         break
 
     input_month = int(input_month)
     input_months.append(input_month)
-for month in input_months:
-    input_season = season(month)
+
+    for month in input_months:
+        input_season = season(month)
     print(f"The number of the month is {month}, {input_season}.")
 
 print("Input stopped")
