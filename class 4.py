@@ -9,20 +9,23 @@ class Elevator:
             print("Error!")
             return
         if floor > self.new_elevator:
-            self.numbers_top(floor)
+            self.floor_up(floor)
         elif floor < self.new_elevator:
-            self.numbers_bottom(floor)
+            self.floor_down(floor)
         else:
-            print(f"The new elevator is on floor {floor}.")
+            print(f"The new elevator is now on floor {floor}.")
 
     def floor_up(self, floor):
         while self.new_elevator < floor:
             self.new_elevator += 1
-        print(f"the elevator is on {self.new_elevator}.")
+        print(f"The elevator is now on floor {self.new_elevator}.")
 
     def floor_down(self, floor):
         while self.new_elevator > floor:
-            self.new_elevator += 1
-        print(f"the elevator is on {self.new_elevator}")
+            self.new_elevator -= 1
+        print(f"The elevator is now on floor {self.new_elevator}")
 
-        self.new_elevator(1)
+
+elevator = Elevator(10, 1)
+elevator.go_to_floor(4)
+elevator.go_to_floor(elevator.numbers_bottom)
