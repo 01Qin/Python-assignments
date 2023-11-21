@@ -28,7 +28,9 @@ print("All the properties of the new car are:")
 print(f"Registration number is: {new_car.registration_number}.")
 print(f"Maximum speed is: {new_car.maximum_speed} km/h.")
 print(f"Current speed is: {new_car.current_speed} km/h.")
+
 new_car.accelerate(-200)
 print(f"Final speed is: {new_car.current_speed} km/h.")
+
 new_car.drive(1.5)
 print(f"Travelled distance is: {new_car.travelled_distance} km.")
