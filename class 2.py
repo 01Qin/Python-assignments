@@ -14,6 +14,10 @@ class Car:
         else:
             self.current_speed = acc_speed
 
+    def drive(self, hours):
+        new_distance = self.current_speed * hours
+        self.travelled_distance += new_distance
+
 
 new_car = Car("ABC-123", 142)
 
@@ -26,4 +30,5 @@ print(f"Maximum speed is: {new_car.maximum_speed} km/h.")
 print(f"Current speed is: {new_car.current_speed} km/h.")
 new_car.accelerate(-200)
 print(f"Final speed is: {new_car.current_speed} km/h.")
+new_car.drive(1.5)
 print(f"Travelled distance is: {new_car.travelled_distance} km.")
