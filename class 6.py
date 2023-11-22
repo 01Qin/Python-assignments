@@ -37,7 +37,7 @@ class Building:
             self.elevators.append(elevator)
 
     def run_elevator(self, number_elevator, destination):
-        if number_elevator < 0 or number_elevator > self.elevators:
+        if number_elevator < 0 or number_elevator >= self.num_elevators:
             print("Error!")
             return
 
@@ -47,7 +47,7 @@ class Building:
 
     def fire_alarm(self):
         print("Fire alarm activated!")
-        for number_elevator in enumerate(self.num_elevators):
+        for elevator in self.elevators:
             elevator.go_to_floor(self.num_bottom)
 
 
