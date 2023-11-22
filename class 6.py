@@ -1,11 +1,11 @@
 class Elevator:
-    def __init__(self, numbers_top, numbers_bottom):
-        self. numbers_top = numbers_top
-        self.numbers_bottom = numbers_bottom
-        self.new_elevator = numbers_bottom
+    def __init__(self, num_bottom, num_top):
+        self. num_top = num_top
+        self.num_bottom = num_bottom
+        self.new_elevator = num_bottom
 
     def go_to_floor(self, floor):
-        if floor < self.numbers_bottom or floor > self. numbers_top:
+        if floor < self.num_bottom or floor > self.num_top:
             print("Error!")
             return
         if floor > self.new_elevator:
