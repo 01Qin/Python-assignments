@@ -1,11 +1,11 @@
 class Elevator:
-    def __init__(self, numbers_top, numbers_bottom):
-        self. numbers_top = numbers_top
+    def __init__(self, numbers_bottom, numbers_top):
         self.numbers_bottom = numbers_bottom
+        self.numbers_top = numbers_top
         self.new_elevator = numbers_bottom
 
     def go_to_floor(self, floor):
-        if floor < self.numbers_bottom or floor > self. numbers_top:
+        if floor < self.numbers_bottom or floor > self.numbers_top:
             print("Error!")
             return
         if floor > self.new_elevator:
@@ -37,12 +37,12 @@ class Building:
             self.elevators.append(elevator)
 
     def run_elevator(self, number_elevator, destination):
-        if number_elevator < self.num_bottom or number_elevator > self.elevators:
+        if number_elevator < 0 or number_elevator >= self.num_elevators:
             print("Error!")
             return
 
         elevator = self.elevators[number_elevator]
-        print(f"The elevator {number_elevator} goes to floor {destination}")
+        print(f"The elevator {number_elevator} goes to floor {destination}.")
         elevator.go_to_floor(destination)
 
 
