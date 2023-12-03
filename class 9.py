@@ -1,5 +1,6 @@
 import requests
 
+
 def get_random_joke():
     url = "https://api.chucknorris.io/jokes/random"
     response = requests.get(url)
@@ -8,7 +9,8 @@ def get_random_joke():
         joke = data["value"]
         return joke
     else:
-        return "Failed to fetch Chuck Norris joke"
+        return "Failed!"
+
 
 random_joke = get_random_joke()
 print(random_joke)
