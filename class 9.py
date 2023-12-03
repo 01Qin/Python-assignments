@@ -1,4 +1,4 @@
-import random
+import requests
 
 def get_random_joke():
     url = "https://api.chucknorris.io/jokes/random"
