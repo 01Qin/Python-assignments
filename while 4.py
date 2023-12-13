@@ -1,8 +1,8 @@
-number = []:
-while
+number = []
+while True:
     number = input("enter a number:")
     if number == "":
-    break
+        break
 if number:
     smallest = min(number)
     largest = max(number)
