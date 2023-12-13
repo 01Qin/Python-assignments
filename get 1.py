@@ -6,6 +6,7 @@ def get_weather(municipality):
 
     response = requests.get(url)
     data = response.json()
+
     if response.status_code == 200:
         weather_description = data['weather'][0]['description']
         temperature = data['main']['temp']
@@ -16,14 +17,18 @@ def get_weather(municipality):
 
 
 def main():
-    municipality = input("Enter the name of a municipality: ")
-    weather_description, temperature = get_weather(municipality)
+    while True:
+        municipality = input("Enter the name of a municipality (or 'q' to quit): ")
+        if municipality.lower() == 'q':
+            print("Exiting the program...")
+            break
+        weather_description, temperature = get_weather(municipality)
 
-    if weather_description and temperature:
-        print(f"Weather in {municipality}: {weather_description}")
-        print(f"Temperature: {temperature}°C")
-    else:
-        print("Error. Please try again.")
+        if weather_description and temperature:
+            print(f"Weather in {municipality}: {weather_description}")
+            print(f"Temperature: {temperature}°C")
+        else:
+            print("Error. Please try again.")
 
 
-    main()
+main()
