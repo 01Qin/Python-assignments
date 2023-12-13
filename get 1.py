@@ -9,11 +9,16 @@ def get_weather(municipality):
 
     if response.status_code == 200:
         weather_description = data['weather'][0]['description']
-        temperature = data['main']['temp']
-
-        return weather_description, temperature
+        temperature_kelvin = data['main']['temp']
+        temperature_celsius = kelvin_to_celsius(temperature_kelvin)
+        return weather_description, temperature_celsius
     else:
         return None, None
+
+
+def kelvin_to_celsius(kelvin):
+    celsius = kelvin - 273.15
+    return int(celsius)
 
 
 def main():
