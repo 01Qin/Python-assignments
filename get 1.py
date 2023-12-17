@@ -2,7 +2,8 @@ import requests
 
 
 def get_weather(municipality):
-    url = "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=eb9f91b8047d28d20c57d1f37bf57a38"
+    url = (f'http://api.openweathermap.org/data/2.5/weather?'
+           f'q={municipality}&appid=29a925ae6946277bb91e8fd8292b5154&units=metric')
 
     response = requests.get(url)
     data = response.json()
