@@ -36,4 +36,5 @@ def get_airport_info(icao_code):
         return jsonify({"Error": "Airport not found"}), 404
 
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
