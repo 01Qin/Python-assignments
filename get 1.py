@@ -3,9 +3,8 @@ import time
 
 
 def get_weather(municipality):
-    api_key = "2a49dc47f926b67ff0a13c6ad635f6cc"
-    url = (f'http://api.openweathermap.org/data/2.5/weather?'
-           f'q={municipality}&appid={api_key}&units=metric')
+    api_key = "29a925ae6946277bb91e8fd8292b5154"
+    url = f'https://api.openweathermap.org/data/2.5/weather?q={municipality}&appid={api_key}'
 
     response = requests.get(url)
     data = response.json()
