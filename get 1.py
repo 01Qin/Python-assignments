@@ -1,9 +1,11 @@
 import requests
+import time
 
 
 def get_weather(municipality):
+    api_key = "2a49dc47f926b67ff0a13c6ad635f6cc"
     url = (f'http://api.openweathermap.org/data/2.5/weather?'
-           f'q={municipality}&appid=29a925ae6946277bb91e8fd8292b5154&units=metric')
+           f'q={municipality}&appid={api_key}&units=metric')
 
     response = requests.get(url)
     data = response.json()
@@ -18,8 +20,10 @@ def get_weather(municipality):
 
 
 def kelvin_to_celsius(kelvin):
+    if kelvin < 0:
+        return None
     celsius = kelvin - 273.15
-    return int(celsius)
+    return round(celsius, 2)
 
 
 def main():
@@ -35,6 +39,17 @@ def main():
             print(f"Temperature: {temperature}°C")
         else:
             print("Error. Please try again.")
+
+        print("Please wait for 10 minutes before entering the next municipality.")
+        action = input("Do you want to quit(q) or wait for 10 minutes(w)? ")
+        if action.lower() == 'q':
+            print("Exiting the program...")
+            break
+        elif action.lower() == 'w':
+            print(f"Please wait for 10 minutes before entering the next municipality.")
+            time.sleep(600)
+        else:
+            print("Invalid input. Please try again.")
 
 
 main()
