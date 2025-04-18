@@ -3,7 +3,7 @@ import time
 
 
 def get_weather(municipality):
-    api_key = "29a925ae6946277bb91e8fd8292b5154"
+    api_key = "--"
     url = f'https://api.openweathermap.org/data/2.5/weather?q={municipality}&appid={api_key}'
 
     response = requests.get(url)
